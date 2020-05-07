@@ -1,0 +1,221 @@
+//BMI Calculator
+
+function bmiCalculator(weight, height){
+   var bmi = (weight/(Math.pow(height,2)));
+        return Math.round(bmi);
+}
+bmiCalculator(65, 1.8);
+if (bmi < 18.5) {
+    console.log("Your BMI is " + bmi + " , so you are underweight.");
+    }
+if (bmi < 18.5 && bmi < 24.9) {
+    console.log("Your BMI is " + bmi + " , so you have a normal weight.");
+    }
+if (bmi > 24.9) {
+    console.log("Your BMI is " + bmi + " , so you are overweight.");
+    }
+-------------------------------------------------------------------------------
+// love calculator
+
+prompt("Enter your name");
+prompt("Enter the name of your love");
+var lovescore = Math.random();
+lovescore = lovescore * 100
+
+if (lovescore > 70){
+    alert("The match is " + lovescore + "%" + "You are a perfect match for each other")
+} if (lovescore > 30 && lovescore <=70){
+    alert("The match is " + lovescore + "%")
+    }
+    if (lovescore <= 30){
+    alert("The match is " + lovescore + "%" + "You are a perfect match like oil and water")
+    }
+-------------------------------------------------------------------------------
+// Leap Year
+
+function leapYear(year) {
+
+if (year % 4 === 0){
+    if (year % 100 === 0){
+        if (year % 400 === 0){
+            return "Leap year"
+        }
+        else{
+            return "Not leap year"
+        }
+    }
+    else {
+        return "Leap year"
+    }
+
+} else{ 
+    return "Not leap year"
+}
+
+}
+leapYear(2100);
+-------------------------------------------------------------------------------
+
+// arrays1
+
+var guestlist = ["Ashwin", "Mehek", "Nidhi", "Mayansh"];
+var guest = prompt("Enter your name");
+if (guestlist.includes(guest)){
+    alert("Welcome " + guest);
+    }
+    else{
+        alert("Maybe next time");
+    }
+-------------------------------------------------------------------------------
+
+// function whosePaying(names){
+
+var noOfPeople = names.length;
+var positionOfPeople = Math.floor(Math.random() * noOfPeople);
+var randomperson = names[positionOfPeople];
+return randomperson + " is going to by lunch!";
+}
+whosePaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
+-------------------------------------------------------------------------------
+
+// javaScript objects
+
+function BellBoy (name, age, hasWorkPermit, languages) {
+this.name = name;
+this.age = age;
+this.hasWorkPermit = hasWorkPermit;
+this.languages = languages;
+this.clean = function () {
+    alert("Cleaning is in process");
+} 
+}
+-------------------------------------------------------------------------------
+
+// prompts
+
+var dog_age = prompt("enter your dog's age");
+var human_age = ((dog_age - 2) * 4) + 21;
+alert("The equivalent humanage is " + human_age)
+-------------------------------------------------------------------------------
+
+// fibonacci series
+
+function fibonacciGenerator (n) {
+
+    var output = [];
+
+      if (n===1) 
+      {
+        output = [0];
+      }
+        else if (n===2)
+      {
+          output = [0,1];
+      }
+      else {
+        output = [0,1];
+        for (var i=2; i <= n; i++) {
+          output.push(output[output.length - 2] + output[output.length - 1]);
+        }
+      }
+  
+  return output;
+
+  }
+
+  output = fibonacciGenerator(10);
+  console.log(output);
+-------------------------------------------------------------------------------
+
+// fizzbuzz solution 
+
+var output = [];
+
+function fizzbuzz() {
+
+   for (var count = 1; count < 100; count++)
+   {
+        if (count % 3 == 0 && count % 5 === 0)
+        {
+            output.push("fizzBuzz");
+            console.log(output);
+        } 
+    else if (count % 3 === 0)
+        {
+            output.push("fizz");}
+
+            else if (count % 5 ===0){
+                output.push("buzz");
+            }
+            
+            else {
+            output.push(count);    
+            }
+             }
+   
+         console.log(output);
+}
+-------------------------------------------------------------------------------
+
+// function calling funtion
+
+function getMilk(money, costperlitre) {
+    
+    console.log("leavehouse");
+    console.log("moveRight");
+    console.log("moveRight");
+    console.log("moveUp");
+    console.log("moveUp");
+    console.log("moveUp");
+    console.log("moveUp");
+    console.log("moveRight");
+    console.log("moveRight");
+    console.log("i have bought " + bottlesOfMilk(money, costperlitre) + " bottles of Milk");
+    console.log("moveLeft");
+    console.log("moveLeft");
+    console.log("moveDown");
+    console.log("moveDown");
+    console.log("moveDown");
+    console.log("moveDown");
+    console.log("moveLeft");
+    console.log("moveLeft");
+    console.log("enterHome");  
+
+    return calcChange(money, costperlitre);
+    }
+// calculate no. of bottles  //
+
+function bottlesOfMilk(dollar, priceperlitre) {
+        var noOfBottles = Math.floor(dollar / priceperlitre);
+        // console.log(noOfBottles);
+        return noOfBottles;
+                }
+
+// calculate change  //
+
+function calcChange(dollar, priceperlitre) {
+        var change = dollar % priceperlitre;
+        // console.log(change);
+        return (change);
+}
+ 
+console.log("The leftover change is " + getMilk(8,3) + "$'s'.");
+-------------------------------------------------------------------------------
+
+// while loop
+
+function beer(){
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottles";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottle";
+    } 
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+	numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
+}
+-------------------------------------------------------------------------------
